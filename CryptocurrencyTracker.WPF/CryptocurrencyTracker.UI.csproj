@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CryptocurrencyTracker.Library\CryptocurrencyTracker.Library.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<None Remove="Images\bar-chart.png"/>
+		<None Remove="Images\search.png"/>
+	</ItemGroup>
+	
+  <ItemGroup>
+	  <Resource Include="Images\bar-chart.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Images\search.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
+  </ItemGroup>
+
+</Project>

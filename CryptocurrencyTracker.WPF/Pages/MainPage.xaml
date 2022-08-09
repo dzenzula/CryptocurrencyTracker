@@ -1,0 +1,18 @@
+﻿<Page x:Class="CryptocurrencyTracker.UI.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CryptocurrencyTracker.UI.Pages"
+      xmlns:n="clr-namespace:CryptocurrencyTracker.UI"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Grid Background="White" ButtonBase.Click="Grid_Click">
+        <WrapPanel>
+            <n:NavButton Text="Main" ImageSource="/Images/bar-chart.png" NavUri="/Pages/MainPage.xaml" Width="70"/>
+            <n:NavButton Text="Search" ImageSource="/Images/search.png" NavUri="/Pages/MainPage.xaml" Width="70"/>
+        </WrapPanel>
+    </Grid>
+</Page>
