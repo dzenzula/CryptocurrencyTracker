@@ -12,8 +12,13 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<None Remove="Images\bar-chart.png"/>
-		<None Remove="Images\search.png"/>
+		<None Remove="Images\bar-chart.png" />
+		<None Remove="Images\search.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="LiveCharts" Version="0.9.7" />
+	  <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
 	</ItemGroup>
 	
   <ItemGroup>

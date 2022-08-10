@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CryptocurrencyTracker.Library.Services;
+using LiveCharts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,11 @@ namespace CryptocurrencyTracker.UI.Pages
     /// </summary>
     public partial class MainPage : Page
     {
+        public SeriesCollection Series { get; set; }
         public MainPage()
         {
             InitializeComponent();
+            Series = new SeriesCollection();
         }
 
         private void Grid_Click(object sender, RoutedEventArgs e)
