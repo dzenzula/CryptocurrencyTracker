@@ -34,13 +34,19 @@ namespace CryptocurrencyTracker.Library.Services
                     Supply = coin.Supply,
                     MaxSupply = coin.MaxSupply,
                     ChangePercent24Hr = coin.ChangePercent24Hr,
-                    VolumeUsd24Hr = coin.VolumeUsd24Hr
+                    VolumeUsd24Hr = coin.VolumeUsd24Hr,
+                    Explorer = coin.Explorer
                 });
             }
 
             return parsedCryptoList;
         }
 
+        public async Task<BaseCryptoModel> GetCoinAsync(string coinCapId)
+        {
+            BaseCryptoModel coin = new BaseCryptoModel();
+            return coin;
+        }
         public async Task<List<CoinHistory>> GetCoinHistory(string id, string interval)
         {
             var parsedHistoryList = new List<CoinHistory>();
@@ -53,7 +59,7 @@ namespace CryptocurrencyTracker.Library.Services
             {
                 parsedHistoryList.Add(new CoinHistory
                 {
-                    Value = coinHistory.Value,
+                    PriceUsd = coinHistory.PriceUsd,
                     DateTime = DateTimeOffset.FromUnixTimeMilliseconds(coinHistory.Time).DateTime
                 });
             }
