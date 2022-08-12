@@ -81,7 +81,7 @@ namespace CryptocurrencyTracker.UI.MVVM
                     Title = SelectedCoin.Name,
                     Values = new ChartValues<decimal>(coinValues),
                     PointGeometry = DefaultGeometries.Circle,
-                    PointGeometrySize = 2
+                    PointGeometrySize = 6
                 });
 
                 Labels = SelectedCoinHistory.Select(i => i.DateTime.ToShortDateString()).ToArray();
