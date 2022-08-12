@@ -8,7 +8,7 @@ namespace CryptocurrencyTracker.Library.Models
 {
     public class CoinHistory
     {
-        public decimal? Value { get; set; }
-        public DateTime? DateTime { get; set; }
+        public decimal PriceUsd { get; set; }
+        public DateTime DateTime { get; set; }
     }
 }
