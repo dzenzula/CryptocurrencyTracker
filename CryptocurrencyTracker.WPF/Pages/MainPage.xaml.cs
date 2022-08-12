@@ -1,4 +1,5 @@
 ﻿using CryptocurrencyTracker.Library.Services;
+using CryptocurrencyTracker.UI.MVVM;
 using LiveCharts;
 using System;
 using System.Collections.Generic;
@@ -22,18 +23,24 @@ namespace CryptocurrencyTracker.UI.Pages
     /// </summary>
     public partial class MainPage : Page
     {
-        public SeriesCollection Series { get; set; }
+        
         public MainPage()
         {
             InitializeComponent();
-            Series = new SeriesCollection();
+
+            
         }
 
         private void Grid_Click(object sender, RoutedEventArgs e)
         {
-            var ClickedButton = e.OriginalSource as NavButton;
+            if(e.OriginalSource is NavButton)
+            {
+                var ClickedButton = e.OriginalSource as NavButton;
 
-            NavigationService.Navigate(ClickedButton.NavUri);
+                NavigationService.Navigate(ClickedButton.NavUri);
+            }
+
+            return;
         }
     }
 }
