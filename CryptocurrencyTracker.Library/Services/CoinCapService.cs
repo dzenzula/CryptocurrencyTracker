@@ -41,12 +41,6 @@ namespace CryptocurrencyTracker.Library.Services
 
             return parsedCryptoList;
         }
-
-        public async Task<BaseCryptoModel> GetCoinAsync(string coinCapId)
-        {
-            BaseCryptoModel coin = new BaseCryptoModel();
-            return coin;
-        }
         public async Task<List<CoinHistory>> GetCoinHistory(string id, string interval)
         {
             var parsedHistoryList = new List<CoinHistory>();
