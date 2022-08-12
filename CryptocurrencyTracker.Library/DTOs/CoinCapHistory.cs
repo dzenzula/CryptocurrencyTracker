@@ -8,7 +8,7 @@ namespace CryptocurrencyTracker.Library.DTOs
 {
     public class CoinCapHistory
     {
-        public decimal? Value { get; set; }
+        public decimal PriceUsd { get; set; }
         public long Time { get; set; }
     }
 }
