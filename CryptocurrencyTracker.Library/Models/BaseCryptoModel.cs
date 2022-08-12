@@ -29,5 +29,7 @@ namespace CryptocurrencyTracker.Library.Models
         public decimal? ChangePercent24Hr { get; set; }
 
         public decimal? Vwap24Hr { get; set; }
+
+        public string Explorer { get; set; }
     }
 }
