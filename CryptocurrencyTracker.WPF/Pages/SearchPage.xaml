@@ -43,9 +43,16 @@
                     <DataGridTextColumn Header="Price USD" Binding="{Binding PriceUsd}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
-            <TextBox Grid.Column="1" Width="150" Height="25" Text="{Binding SearchString, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
-                     VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,25,0,0"></TextBox>
-            <Image Grid.Column="1" Width="20" Height="20" Source="/Images/search.png" Margin="165,25,10,327"/>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Grid.Column="0" Width="150" Height="25" Text="{Binding SearchString, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+                     VerticalAlignment="Top" Margin="10,25,0,0" FontSize="14"></TextBox>
+                <Image Grid.Column="1" Width="25" Height="25" Source="/Images/search.png" VerticalAlignment="Top" Margin="0,25,0,0"/>
+            </Grid>
+            
         </Grid>
     </Grid>
     
